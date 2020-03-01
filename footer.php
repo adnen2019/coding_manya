@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-md-9 col-sm-9 p-0">
                     <h4>Email</h4>
-                    <p><a href="mailto:adnenchwayekh@outlook.fr">adnenchwayekh@outlook.fr
+                    <p><a href="mailto:adnenchwayekh@outlook.fr">Re-Tex@gmail.com
 </a></p>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <i class=" fas fa-laptop"></i>
                 </div>
                 <div class=" col-md-9 col-xs-11 p-0">
-                    <h4>Contact us</h4>
+                    <h4>Contact</h4>
                     <p><a href="contact.php">feedback,request..</a></p>
                 </div>
             </div>
@@ -50,5 +50,5 @@
     
 </section>
 
- <div class="col-12 mt-4" align="center"> Copyright Boost-Skills | All Rights Reserved </div>
+ <div class="col-12 mt-4" align="center"> Copyright Re-Tex | All Rights Reserved </div>
 <!-- //contact -->

@@ -31,7 +31,7 @@ if ($conn->connect_error) {
 <!DOCTYPE html>
 <html>
  <head>
-     <title>Re-Tex</title>
+     <title>psynet</title>
 
      <link rel="icon" type="image/png" href="bs.ico" /> 
      <meta charset="UTF-8" />
@@ -58,59 +58,43 @@ if ($conn->connect_error) {
 
  <?php require 'slideshow.php' ; ?>   
             
+            <div class="cnxn fluid-container header mb-5 " style="background-color: rgb(25,0,0);">
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color row">
   
+ 
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+   
+        <a class="nav-link col-4 text-center" href="index.php"><strong>Student</strong>
+        </a>
+      
+      <img src="e/tfd.png"  style="height:180px;width: 180px;" class="col-2">
+      
+        <a class="nav-link col-6  ml-6" href="index.php#login" ><strong>Adnen <br>Chwayekh</a></strong>
+      
+    
+    
+    
+     
+      
 
+   
+  </div>
+</nav>
+
+</div>
          <div class="container">
-         	<div class="mt-5 row">
-         	<div class="col-12"style="font-size:40px ;"><strong>Qui Nous Sommes : </strong><br>Nous sommes une société tunisienne nommée Re-TEX spécialisé dans le domaine de collecte et de recyclage des déchets de textiles.. Notre liste de produits comprend différents types de déchets textiles de vêtements usés, des chiffons d'essuyage industriels et effilochés. Pour plus d'informations, prière de nous contacter.</div>	
-         	
-         	</div>
-         </div>
-         <div class="row">
+            
+            <div class="row">
+                <div class="col-4"><img class="image" src="e/s1.png"title="" /></div>
+                <div class="col-4"><img class="image" src="e/s2.png"title="" /></div>
+                <div class="col-4"><img class="image" src="e/s3.png"title="" /></div>
 
-         	
-         </div>
-            <div class="container">
-             <div id="login" >
-                 <?php require 'connexion.php' ; ?>
-             </div>
-           
-                    <?php 
-                    
-                     if (isset($_POST['signin']))
-                      {
-                     if( empty($_POST["email1"])|| empty($_POST["mdp1"])){ 
-                     echo "<script>alert('ERREUR : tous les champs n ont pas ete renseignes');</script>";
-                     }
-                     else {
-                        $reponse= $bdd->prepare('SELECT * FROM logins  where email=?  ') ;
-                     $reponse->execute(array($_POST['email1'])) ;
-                   
-                      // $donnees=$reponse->fetch() ;
-                      while($donnees=$reponse->fetch())
-                     { if($donnees['mdp']==$_POST["mdp1"]) 
-                     {   
-                     $_SESSION['nom']=$donnees['nom'] ;
-                     $_SESSION['prenom']=$donnees['prenom'] ;
-                     $_SESSION['email']=$donnees['email'] ;
-                     $_SESSION['mdp']=$donnees['mdp'] ;
-                     $_SESSION['tel']=$donnees['tel'] ;
-                     
-                      
-                     echo "<script>window.open('connectee.php','_self')</script>";
-                     }
-                     else {echo "<script>alert('Email or password is not correct, try again!')</script>";}
-                     }
-                     }
+            </div>
 
-                      }
-                    ?>
-              
 		 </div>
-		<div class="row">
-			<?php require 'produit.php' ; ?>   
-		</div>
-
+ <?php require 'dr.php' ; ?>
           
          <footer id="foo" class="row">
              <div class="col-lg-12">

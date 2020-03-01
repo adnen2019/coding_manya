@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-     <title>sign up</title>
+     <title>s'inscrire</title>
      <link rel="icon" type="image/png" href="bs.ico" /> 
      
      <meta charset="UTF-8" />
@@ -26,12 +26,17 @@
          <header class="row">
              <?php require 'header.php' ; ?>    
          </header>
-           <div class="row abc"> e-learning site</div>
-             <div class="row">  
-             <div class="py-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <img class="image" src="e/e-learning.png"title="" />
-             </div>
+           
+          <?php require 'slideshow.php' ; ?>   
+            
+           
+         <div class="container">
+            <div class="row">
+            <div class="col-6"style="font-size:24px ;"><strong>What is the problem we're trying to solve?</strong><br>Treatment of psychological problems is no longer easy these days when the daily commitments of the individual increase, the free time is reduced and openness to others has become a complex uncomfortable process. In addition, the application of the educational capabilities of the students of psychology is not easy due to the lack of opportunities for application..</div>   
+            <div class="col-6"style="font-size:24px ;"><strong>How we plan to solve it?</strong><br>Digitalisation of the psychiatry field by creating a confidential and secured website that provides non-judgemental emotional support either threw professional sessions by doctors or by interacting with psychology students who -as a result- can build a solid e-reputation as future psychiatrist.</div>   
+
             </div>
+         </div>
            
          <div class="container">
                <div class="row">
@@ -83,16 +88,16 @@
  <!-- Default form register -->
  <form  class="text-center border border-light p-5" method="POST">
 
-    <p class="h4 mb-4">Sign up</p>
+    <p class="h4 mb-4">inscription</p>
 
     <div class="form-row mb-4">
         <div class="col-sm-12 col-md-6 mb-4">
             <!-- First name -->
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" name="nom">
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="nom" name="nom">
         </div>
         <div class="col-sm-12 col-md-6">
             <!-- Last name -->
-            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" name="prenom">
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="prenom" name="prenom">
         </div>
     </div>
 
@@ -100,26 +105,29 @@
     <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" name="email">
 
     <!-- Password -->
-    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="mdp">
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="mdp">
     <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-        At least 8 characters 
+        Au moins 8 characteres 
     </small>
 
     <!-- Phone number -->
-    <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="tel">
+    <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="numero de telephone" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="tel">
     <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-        Optional - for two step authentication
+        Optionel 
     </small>
+    
+
+
 
     <!-- Newsletter -->
     <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-        <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+        <label class="custom-control-label" for="defaultRegisterFormNewsletter">s'inscrire a nos newsletter</label>
     </div>
     <div id="alerte"></div>
     <!-- Sign up button -->
         
-    <button id="signup" onclick="formVerif()"  class="btn btn-info my-4 btn-block" type="button" name="signup">Sign up</button>
+    <button id="signup" onclick="formVerif()"  class="btn btn-info my-4 btn-block" type="button" name="signup">inscription</button>
 
     <!-- Social register -->
    
@@ -127,41 +135,56 @@
     <hr>
 
     <!-- Terms of service -->
-    <p>By clicking
-        <em>Sign up</em> you agree to our
-        <a href="" target="_blank">terms of service</a>
- </p>
+
   </form>
  <!-- Default form register -->
+ <div class="col-lg-2 col-md-1 "></div>
  </div>
- <div class="col-lg-2 col-md-1 "></div></div>
-
-
-
-
-
+ 
+</div>
 
 
 </div>
+
             <div class="row">  
-             <div class="py-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <img class="image" src="e/e.jpg"title="" />
-             </div>
+            
             </div>
-           <div class="row abc"> e-learning site</div>
+            
          <footer id="foo" class="row">
              <div class="col-lg-12">
              <?php require 'footer.php' ; ?>
              </div>      
          </footer>
      </div>
-     <script type="text/javascript">
+    <script type="text/javascript">
         first_name=document.getElementById("defaultRegisterFormFirstName") ;
         last_name=document.getElementById("defaultRegisterFormLastName") ;
         email=document.getElementById("defaultRegisterFormEmail") ;
         mdp=document.getElementById("defaultRegisterFormPassword") ;
         signup=document.getElementById("signup") ;  
          alerte=document.getElementById("alerte") ;
+             //Pour masquer la division :
+         // document.getElementById("patient").style.display ="none" ;
+         // document.getElementById("psycho").style.display ="none" ;
+        //  document.getElementById("Student").style.display ="none" ;
+
+            ///Pour afficher la division :
+         function patient() {
+             document.getElementById("patient").style.display ="block"; 
+             document.getElementById("psycho").style.display ="none"; 
+             document.getElementById("student").style.display ="none"; 
+             }
+               function psycho() {
+             document.getElementById("patient").style.display ="block"; 
+             document.getElementById("psycho").style.display ="none"; 
+             document.getElementById("student").style.display ="none"; 
+             }
+               function student() {
+             document.getElementById("patient").style.display ="block"; 
+             document.getElementById("psycho").style.display ="none"; 
+             document.getElementById("student").style.display ="none"; 
+             }
+
         function formVerif(){
             if(first_name.value==""){ 
                 signup.type="button" ;
@@ -188,28 +211,28 @@
                 else {signup.type="submit" ;
                 
                 }
-        }
+         }
         // When the user clicks on the password field, show the message box
-function First() { first_name.focus() ;
-}
+              function First() { first_name.focus() ;
+              }
 
-//mdp.onfocus = function() { document.getElementById("message").style.display = "block";}
+          //mdp.onfocus = function() { document.getElementById("message").style.display = "block";}
 
-// When the user clicks outside of the password field, hide the message box
-/*mdp.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
-// When the user starts to type something inside the password field
-mdp.onkeyup = function() { 
-// Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-}*/
+                // When the user clicks outside of the password field, hide the message box
+                /*mdp.onblur = function() {
+                  document.getElementById("message").style.display = "none";
+                }
+                // When the user starts to type something inside the password field
+                mdp.onkeyup = function() { 
+                // Validate length
+                  if(myInput.value.length >= 8) {
+                    length.classList.remove("invalid");
+                    length.classList.add("valid");
+                  } else {
+                    length.classList.remove("valid");
+                    length.classList.add("invalid");
+                  }
+                }*/
 
            //Pour masquer la division :
          /*  document.getElementById("inscri").style.display ="none" ;
@@ -222,7 +245,7 @@ mdp.onkeyup = function() {
              document.getElementById("inscri").style.display ="none"; 
              document.getElementById("login").style.display ="block"; 
              }*/
-     </script>
+    </script>
      <script src="js/jquery-2.2.4.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
  </body>

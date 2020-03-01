@@ -38,12 +38,16 @@
              <?php require 'header.php' ; ?>    
          </header>
            <div class="row abc"> e-learning site</div>
-             <div class="row">  
-             <div class="py-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <img class="image" src="e/e-learning.png"title="" />
-             </div>
-            </div>
+           <?php require 'slideshow.php' ; ?>   
+            
            
+         <div class="container">
+            <div class="row">
+            <div class="col-6"style="font-size:24px ;"><strong>What is the problem we're trying to solve?</strong><br>Treatment of psychological problems is no longer easy these days when the daily commitments of the individual increase, the free time is reduced and openness to others has become a complex uncomfortable process. In addition, the application of the educational capabilities of the students of psychology is not easy due to the lack of opportunities for application..</div>   
+            <div class="col-6"style="font-size:24px ;"><strong>How we plan to solve it?</strong><br>Digitalisation of the psychiatry field by creating a confidential and secured website that provides non-judgemental emotional support either threw professional sessions by doctors or by interacting with psychology students who -as a result- can build a solid e-reputation as future psychiatrist.</div>   
+
+            </div>
+         </div>
          <div class="container">
 
              <div class="row">
@@ -130,11 +134,7 @@ mail($to, $subject, $message, $headers);
 
 
 </div>
-            <div class="row">  
-             <div class="py-5 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <img class="image" src="e/e.jpg"title="" />
-             </div>
-            </div>
+            <?php require 'dr.php' ; ?>
            <div class="row abc"> e-learning site</div>
          <footer id="foo" class="row">
              <div class="col-lg-12">
